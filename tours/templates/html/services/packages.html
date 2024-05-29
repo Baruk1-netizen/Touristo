@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nairobi National Park Tourist Packages</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/packages.css') }}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </div>
+        <ul class="nav-list" id="navList">
+            <li class="nav-item"><a href="{{ url_for('index') }}">Home</a></li>
+            <li class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">DISCOVER&#9660;</a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item"><a href="{{ url_for('animals') }}">Animals</a></li>
+                    <li class="nav-item"><a href="{{ url_for('hotels') }}">Hotels</a></li>
+                    <li class="nav-item"><a href="{{ url_for('citymalls') }}">Citymalls</a></li>
+                    <li class="nav-item"><a href="{{ url_for('map') }}">Live map</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">SERVICES &#9660;</a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item"><a href="{{ url_for('accommodation') }}">Accommodation</a></li>
+                    <li class="nav-item"><a href="{{ url_for('packages') }}">Packages</a></li>
+                    <li class="nav-item"><a href="{{ url_for('transportation') }}">Transportation</a></li>
+                    
+
+                </ul>
+            </li>
+            <li class="nav-item"><a href="{{ url_for('about') }}">About</a></li>
+            <li class="nav-item"><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+    </nav>
+    <h1>Nairobi National Park Tourist Packages</h1>
+    <div class="packintro">
+    <p>Nairobi National Park, located just minutes from the bustling city center, offers a unique wildlife experience
+        unlike any other. Witnessing herds of zebra and giraffe roaming freely against the backdrop of the Nairobi
+        skyline is a sight you won't soon forget.</p>
+    </div>
+<div class="packages">
+    <h2>Half-Day Safari:</h2>
+    <p><strong>Perfect for:</strong> Travelers with limited time who want a taste of the Kenyan safari experience.<br>
+        <strong>Duration:</strong> 4-5 hours<br>
+        <strong>Activities:</strong> Game drive in a 4x4 vehicle, guided nature walk (optional), visit to the hippo
+        pool.<br>
+        <strong>Price:</strong> $50-$100 per person (entrance fee not included)<br>
+        <img src="/static/images/fullDaySafari.avif" alt="Image of HalfDay Safari in Nairobi National Park" width="300">
+    </p>
+
+    <h2>Full-Day Safari:</h2>
+    <p><strong>Perfect for:</strong> Travelers who want a more in-depth exploration of the park and its wildlife.<br>
+        <strong>Duration:</strong> 8-10 hours<br>
+        <strong>Activities:</strong> Game drives in the morning and afternoon, picnic lunch in the park, visit to the
+        David Sheldrick Wildlife Trust (optional).<br>
+        <strong>Price:</strong> $100-$200 per person (entrance fee not included)<br>
+        <img src="/static/images/halfDaysafari.jpg" alt="Image of FullDay Safari in Nairobi National Park" width="300">
+    </p>
+
+    <h2>Luxury Safari:</h2>
+    <p><strong>Perfect for:</strong> Travelers seeking a high-end safari experience with personalized attention.<br>
+        <strong>Duration:</strong> Full day or multiple days<br>
+        <strong>Activities:</strong> Private game drives with experienced guides, gourmet meals, exclusive access to
+        hidden areas of the park, overnight stay at a luxury lodge.<br>
+        <strong>Price:</strong> $500+ per person
+       
+
+    </p>
+    <img src="/static/images/Luxurysafari.jpg" alt="Image of HalfDay Safari in Nairobi National Park" width="300">
+
+    <h2>Budget Safari:</h2>
+    <p><strong>Perfect for:</strong> Travelers on a tight budget who still want to experience the park's wildlife.<br>
+        <strong>Duration:</strong> Half day or full day<br>
+        <strong>Activities:</strong> Shared game drives in open-top vehicles, packed lunch, basic amenities.<br>
+        <strong>Price:</strong> $30-$50 per person (entrance fee not included)<br>
+        <img src="/static/images/budgetsafari.jpg" alt="Image of Budget Safari in Nairobi National Park" width="300">
+    </p>
+
+    <h2>Family Safari:</h2>
+    <p><strong>Perfect for:</strong> Families with children of all ages.<br>
+        <strong>Duration:</strong> Half day or full day<br>
+        <strong>Activities:</strong> Educational game drives with child-friendly guides, interactive activities, visit
+        to the Nairobi Animal Orphanage.<br>
+        <strong>Price:</strong> Varies depending on the tour operator and number of children
+        
+    </p>
+    <img src="/static/images/familysafari.jpg" alt="Image of Budget Safari in Nairobi National Park" width="300">
+
+
+
+    <div class="bookingpanari">
+<div class="packagebooking">
+        <h2 >Book Your Package</h2>
+        <div class="bookpanari">
+            <form action='/packages' method="POST">
+                {% if message%}
+                    <p style="color:green">{{ message }}</p>
+                {% endif %}
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkin">Check-in Date:</label>
+                    <input type="date" id="checkin" name="checkin" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkout">Check-out Date:</label>
+                    <input type="date" id="checkout" name="checkout" required>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Number of Guests:</label>
+                    <select id="guests" name="guests" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5+</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="room">Package Type:</label>
+                    <select id="room" name="room" required>
+                        <option value="Half-Day">Half-Day Safari</option>
+                        <option value="Full-Day">Full-Day Safari</option>
+                        <option value="Luxury">Luxury Safari</option>
+                        <option value="Bidget">Budget Safari</option>
+                        <option value="Family">Family Safari</option>
+                    </select>
+                </div>
+                <div class="bookpanaribtn">
+                    <button type="submit">Book Now</button>
+                </div>
+            </form>
+        </div>
+</div>
+        
+    <h2>Additional Options:</h2>
+    <ul>
+        <li>Giraffe Center: Visit the Giraffe Center to learn about giraffes and even feed them by hand.</li>
+        <li>David Sheldrick Wildlife Trust: Visit the orphanage to see rescued baby elephants and learn about their
+            conservation efforts.</li>
+        <li>Nairobi National Museum: Learn about the history and culture of Kenya before or after your safari.</li>
+    </ul>
+    <h2>Tips:</h2>
+    <ul>
+        <li>Book your tour in advance, especially during peak season.</li>
+        <li>Wear comfortable clothing and shoes suitable for walking.</li>
+        <li>Bring sunscreen, a hat, and sunglasses.</li>
+        <li>Pack plenty of water and snacks.</li>
+        <li>Be respectful of the wildlife and their habitat.</li>
+    </ul>
+
+    <p>I hope this helps you plan your perfect Nairobi National Park adventure!</p>
+</div>
+
+</body>
+
+</html>

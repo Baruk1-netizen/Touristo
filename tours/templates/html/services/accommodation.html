@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nairobi National Park Accommodation</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/accommodation.css') }}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </div>
+        <ul class="nav-list" id="navList">
+            <li class="nav-item"><a href="{{ url_for('index') }}">Home</a></li>
+            <li class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">DISCOVER&#9660;</a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item"><a href="{{ url_for('animals') }}">Animals</a></li>
+                    <li class="nav-item"><a href="{{ url_for('hotels') }}">Hotels</a></li>
+                    <li class="nav-item"><a href="{{ url_for('citymalls') }}">Citymalls</a></li>
+                    <li class="nav-item"><a href="{{ url_for('map') }}">Live map</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">SERVICES &#9660;</a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item"><a href="{{ url_for('accommodation') }}">Accommodation</a></li>
+                    <li class="nav-item"><a href="{{ url_for('packages') }}">Packages</a></li>
+                    <li class="nav-item"><a href="{{ url_for('transportation') }}">Transportation</a></li>
+                    
+
+                </ul>
+            </li>
+            <li class="nav-item"><a href="{{ url_for('about') }}">About</a></li>
+            <li class="nav-item"><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+    </nav>
+                            {% if hotel%}
+                                {% if message%}
+                                    <p style="color:green">{{ message }}</p>
+                                {% endif %}
+                            {% endif %}
+    <header>
+        <h1>Accommodation Options</h1>
+        <nav>
+            <a href="#panari">The Panari Hotel</a>
+            <a href="#eka">Eka Hotel</a>
+            <a href="#decasa">Decasa Hotel</a>
+            <a href="#boma">The Boma Nairobi</a>
+            <a href="#olesereni">Ole Sereni Hotel</a>
+            <a href="#radisson">Radisson Blu Hotel</a>
+        </nav>
+    </header>
+    <div class="hotelsimg">
+        <section id="panari">
+
+            <div class="panari">
+                <div class="panariinfo">
+                    <h2>The Panari Hotel</h2>
+                    <p><strong>Location:</strong> Parklands, Mvuli Rd, Nairobi, Kenya.(Approximately 18.2 km from
+                        Nairobi National Park)
+                    </p>
+                    <h3>Facilities and Amenities:</h3>
+                    <ul>
+                        <li><strong>Room types:</strong> Standard rooms, executive suites, deluxe suites.</li>
+                        <li><strong>Dining options:</strong> Multiple restaurants offering diverse cuisines.</li>
+                        <li><strong>Recreation facilities:</strong> Swimming pool, fitness center, spa services.</li>
+                        <li><strong>Other amenities:</strong> Wi-Fi, laundry services, conference rooms.</li>
+                    </ul>
+                </div>
+                <div class="panariimg">
+                    <img src="/static/images/panariHotel.jpeg" alt="Panari Hotel">
+                </div>
+                <div class="bookingpanari">
+
+                    <h2>Book Your Stay</h2>
+                    <div class="bookpanari">
+                        <form id='forms' action="/accommodation" method="POST">
+                            <div class="form-group">
+                                <label for="name">Full Name:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkinDate">Check-in Date:</label>
+                                <input type="date" id="checkinDate" name="checkinDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkoutDate">Check-out Date:</label>
+                                <input type="date" id="checkoutDate" name="checkoutDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">Number of Guests:</label>
+                                <select id="guests" name="guests" required>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5+</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="room">Room Type:</label>
+                                <select id="room" name="room" required>
+                                    <option value="single">Single Room</option>
+                                    <option value="double">Double Room</option>
+                                    <option value="suite">Suite</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="hotel">Confirm that your booking this hotel:
+                                    <input type="checkbox" id="hotel" name="hotel" value="The Panari Hotel" required>
+                                </label>
+                            </div>
+                            <div class="bookpanaribtn">
+                                <button type="submit">Book Now</button>
+                            </div>
+                        </form>
+                    </div>
+                    <p>Contact details for reservations and inquiries:Phone: +254-711 091 000, Email:
+                        sales@panarihotels.com</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="eka">
+            <div class="eka">
+                <div class="ekainfo">
+                    <h2>Eka Hotel</h2>
+                    <p><strong>Location:</strong> Along Mombasa Road,Nairobi,Kenya(Approximately 5.9 km from Nairobi
+                        National Park)
+                    </p>
+                    <h3>Facilities and Amenities:</h3>
+                    <ul>
+                        <li><strong>Room types:</strong> Standard rooms, executive rooms, suites.</li>
+                        <li><strong>Dining options:</strong> All-day dining restaurant, bar lounge.</li>
+                        <li><strong>Recreation facilities:</strong> Fitness center, outdoor pool.</li>
+                        <li><strong>Other amenities:</strong> Wi-Fi, laundry services, business center.</li>
+                    </ul>
+                </div>
+                <div class="ekaimg">
+                    <img src="/static/images/EkaHotel2.jpeg" alt="Eka Hotel">
+                </div>
+                <div class="bookingeka">
+
+                    <h2>Book Your Stay</h2>
+                    <div class="bookeka">
+                        <form id='forms' action="/accommodation" method="POST">
+                            <div class="form-group">
+                                <label for="name">Full Name:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkinDate">Check-in Date:</label>
+                                <input type="date" id="checkinDate" name="checkinDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkoutDate">Check-out Date:</label>
+                                <input type="date" id="checkoutDate" name="checkoutDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">Number of Guests:</label>
+                                <select id="guests" name="guests" required>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5+</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="room">Room Type:</label>
+                                <select id="room" name="room" required>
+                                    <option value="single">Single Room</option>
+                                    <option value="double">Double Room</option>
+                                    <option value="suite">Suite</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="hotel">Confirm that your booking this hotel:
+                                    <input type="checkbox" id="hotel" name="hotel" value="The Eka Hotel" required>
+                                </label>
+                            </div>
+                            <div class="bookekabtn">
+                                <button type="submit">Book Now</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <p>Contact details for reservations and inquiries: Phone: +254 719 045 000, Email:
+                        sales@ekahotel.com</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="decasa">
+            <div class="decasa">
+                <div class="decasainfo">
+                    <h2>Decasa Hotel</h2>
+                    <p><strong>Location:</strong>Upper River Road opposite KCB Bank,Nairobi,Kenya.(Approximately 10.1
+                        km<br> from Nairobi National Park)
+                    </p>
+                    <h3>Facilities and Amenities:</h3>
+                    <ul>
+                        <li><strong>Room types:</strong> Standard rooms, deluxe rooms, family rooms.</li>
+                        <li><strong>Dining options:</strong> On-site restaurant serving local and international dishes.
+                        </li>
+                        <li><strong>Recreation facilities:</strong> Swimming pool, fitness center, spa services.</li>
+                        <li><strong>Other amenities:</strong> Wi-Fi, room service, conference facilities.</li>
+                    </ul>
+                </div>
+                <div class="decasaimg">
+                    <img src="/static/images/DecasaHotel.jpeg" alt="Decasa Hotel">
+                </div>
+
+                <div class="bookingdecasa">
+
+                    <h2>Book Your Stay</h2>
+                    <div class="bookdecasa">
+                        <form id='forms' action="/accommodation" method="POST">
+                            <div class="form-group">
+                                <label for="name">Full Name:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkinDate">Check-in Date:</label>
+                                <input type="date" id="checkinDate" name="checkinDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkoutDate">Check-out Date:</label>
+                                <input type="date" id="checkoutDate" name="checkoutDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">Number of Guests:</label>
+                                <select id="guests" name="guests" required>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5+</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="room">Room Type:</label>
+                                <select id="room" name="room" required>
+                                    <option value="single">Single Room</option>
+                                    <option value="double">Double Room</option>
+                                    <option value="suite">Suite</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="hotel">Confirm that your booking this hotel:
+                                    <input type="checkbox" id="hotel" name="hotel" value="The Decasa Hotel" required>
+                                </label>
+                            </div>
+                            <div class="bookdecasabtn">
+                                <button type="submit">Book Now</button>
+                            </div>
+                        </form>
+                    </div>
+                    <p>Contact details for reservations and inquiries: Phone: +254 (0)739 227 802, Email:
+                        info@decasahotel.co.ke</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="boma">
+            <div class="boma">
+                <div class="bomainfo">
+                    <h2>The Boma Nairobi</h2>
+                    <p><strong>Location:</strong> 00100, Bellevue, Off Mombasa Road, 00200-60705 Red Cross Rd, Nairobi,
+                        Kenya.<br>(Approximately 9.4 km from Nairobi National Park)
+                    </p>
+                    <h3>Facilities and Amenities:</h3>
+                    <ul>
+                        <li><strong>Room types:</strong> Standard rooms, deluxe rooms, suites.</li>
+                        <li><strong>Dining options:</strong> Multiple dining venues including a buffet restaurant and
+                            bar.
+                        </li>
+                        <li><strong>Recreation facilities:</strong> Swimming pool, fitness center, spa services.</li>
+                        <li><strong>Other amenities:</strong> Wi-Fi, laundry services, conference rooms.</li>
+                    </ul>
+                </div>
+                <div class="bomaimg">
+                    <img src="/static/images/the-boma-nairobi.jpg" alt="The Boma Nairobi">
+                </div>
+
+
+                <div class="bookingboma">
+
+                    <h2>Book Your Stay</h2>
+                    <div class="bookboma">
+                        <form id='forms' action="/accommodation" method="POST">
+                            <div class="form-group">
+                                <label for="name">Full Name:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkinDate">Check-in Date:</label>
+                                <input type="date" id="checkinDate" name="checkinDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkoutDate">Check-out Date:</label>
+                                <input type="date" id="checkoutDate" name="checkoutDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">Number of Guests:</label>
+                                <select id="guests" name="guests" required>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5+</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="room">Room Type:</label>
+                                <select id="room" name="room" required>
+                                    <option value="single">Single Room</option>
+                                    <option value="double">Double Room</option>
+                                    <option value="suite">Suite</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="hotel">Confirm that your booking this hotel:
+                                    <input type="checkbox" id="hotel" name="hotel" value="The Boma Hotel" required>
+                                </label>
+                            </div>
+                            <div class="bookbomabtn">
+                                <button type="submit">Book Now</button>
+                            </div>
+                        </form>
+                    </div>
+                    <p>Contact details for reservations and inquiries: Phone:
+                        +254 719 050 000, Email:
+
+                        sales@theboma.co.ke</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="olesereni">
+            <div class="olesereni">
+                <div class="olesereniinfo">
+                    <h2>Ole Sereni Hotel</h2>
+                    <p><strong>Location:</strong> Mombasa Road, Nairobi(Approximately 2.8 km from Nairobi National Park)
+                    </p>
+                    <h3>Facilities and Amenities:</h3>
+                    <ul>
+                        <li><strong>Room types:</strong> Standard rooms, deluxe rooms, suites.</li>
+                        <li><strong>Dining options:</strong> Multiple restaurants offering various cuisines.</li>
+                        <li><strong>Recreation facilities:</strong> Rooftop swimming pool, fitness center, spa services.
+                        </li>
+                        <li><strong>Other amenities:</strong> Wi-Fi, laundry services, conference facilities.</li>
+                    </ul>
+                </div>
+                <div class="sereniimg">
+                    <img src="/static/images/OleSereniHotel.jpeg" alt="Ole Sereni Hotel">
+                </div>
+
+                <div class="bookingsereni">
+
+                    <h2>Book Your Stay</h2>
+                    <div class="booksereni">
+                        <form id='forms' action="/accommodation" method="POST">
+                            <div class="form-group">
+                                <label for="name">Full Name:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkinDate">Check-in Date:</label>
+                                <input type="date" id="checkinDate" name="checkinDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkoutDate">Check-out Date:</label>
+                                <input type="date" id="checkoutDate" name="checkoutDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">Number of Guests:</label>
+                                <select id="guests" name="guests" required>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5+</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="room">Room Type:</label>
+                                <select id="room" name="room" required>
+                                    <option value="single">Single Room</option>
+                                    <option value="double">Double Room</option>
+                                    <option value="suite">Suite</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="hotel">Confirm that your booking this hotel:
+                                    <input type="checkbox" id="hotel" name="hotel" value="The Ole Sereni Hotel" required>
+                                </label>
+                            </div>
+                            <div class="bookserenibtn">
+                                <button type="submit">Book Now</button>
+                            </div>
+                        </form>
+                    </div>
+                    <p>Contact details for reservations and inquiries: Phone: +254 732 191 000, Email:
+                        reservations@ole-serenihotel.com</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="radisson">
+            <div class="radisson">
+                <div class="radissoninfo">
+                    <h2>Radisson Blu Hotel Hotel</h2>
+                    <p><strong>Location:</strong> Elgon Rd, Nairobi, Kenya(Approximately 8.2 km from Nairobi National
+                        Park)
+                    </p>
+                    <h3>Facilities and Amenities:</h3>
+                    <ul>
+                        <li><strong>Room types:</strong> Standard rooms, business class rooms, suites.</li>
+                        <li><strong>Dining options:</strong> Several restaurants and bars with diverse menus.</li>
+                        <li><strong>Recreation facilities:</strong> Outdoor swimming pool, fitness center, spa.</li>
+                        <li><strong>Other amenities:</strong> Wi-Fi, room service, meeting rooms.</li>
+                    </ul>
+                </div>
+                <div class="radissonimg">
+                    <img src="/static/images/RadissonBluHotel.jpeg" alt="Radisson Blu Hotel">
+                </div>
+
+                <div class="bookingradisson">
+
+                    <h2>Book Your Stay</h2>
+                    <div class="bookradisson">
+                        <form id='forms' action="/accommodation" method="POST">
+
+                            <div class="form-group">
+                                <label for="name">Full Name:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkinDate">Check-in Date:</label>
+                                <input type="date" id="checkinDate" name="checkinDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkoutDate">Check-out Date:</label>
+                                <input type="date" id="checkoutDate" name="checkoutDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">Number of Guests:</label>
+                                <select id="guests" name="guests" required>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5+</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="room">Room Type:</label>
+                                <select id="room" name="room" required>
+                                    <option value="single">Single Room</option>
+                                    <option value="double">Double Room</option>
+                                    <option value="suite">Suite</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="hotel">Confirm that your booking this hotel:
+                                    <input type="checkbox" id="hotel" name="hotel" value="The Radisson Hotel" required>
+                                </label>
+                            </div>
+                            <div class="bookradissonbtn">
+                                <button type="submit">Book Now</button>
+                            </div>
+                        </form>
+                    </div>
+                    <p>Contact details for reservations and inquiries: Phone: +254 20 7643750, Email:
+                        reservations@thepanarihotel.com</p>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Nairobi National Park. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

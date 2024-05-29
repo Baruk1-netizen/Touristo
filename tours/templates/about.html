@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About Nairobi National Park</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/about.css') }}">
+</head>
+
+<body>
+    <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </div>
+        <ul class="nav-list" id="navList">
+            <li class="nav-item"><a href="{{ url_for('index') }}">Home</a></li>
+            <li class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">DISCOVER&#9660;</a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item"><a href="{{ url_for('animals') }}">Animals</a></li>
+                    <li class="nav-item"><a href="{{ url_for('hotels') }}">Hotels</a></li>
+                    <li class="nav-item"><a href="{{ url_for('citymalls') }}">Citymalls</a></li>
+                    <li class="nav-item"><a href="{{ url_for('map') }}">Live map</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">SERVICES &#9660;</a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item"><a href="{{ url_for('accommodation') }}">Accommodation</a></li>
+                    <li class="nav-item"><a href="{{ url_for('packages') }}">Packages</a></li>
+                    <li class="nav-item"><a href="{{ url_for('transportation') }}">Transportation</a></li>
+                    
+
+                </ul>
+            </li>
+            <li class="nav-item"><a href="{{ url_for('about') }}">About</a></li>
+            <li class="nav-item"><a href="{{ url_for('contact') }}">Contact</a></li>
+
+        </ul>
+    </nav>
+
+    <header>
+       
+        <h1>About Nairobi National Park</h1>
+   
+    </header>
+
+    <section id="about">
+        <div class="container1">
+            <div class="section">
+                <h2>Location</h2>
+                <p>Nairobi National Park is located just 7 kilometers south of Nairobi, the capital city of Kenya.
+                    Despite its proximity to the urban area, the park is renowned for its diverse wildlife and natural
+                    beauty.</p>
+            </div>
+
+            <div class="section">
+                <h2>Overview</h2>
+                <p>Nairobi National Park is a unique wildlife reserve that offers a quintessential African safari
+                    experience. Established in 1946, the park spans approximately 117 square kilometers and is home to a
+                    wide variety of flora and fauna.</p>
+            </div>
+
+            <div class="section">
+                <h2>Wildlife</h2>
+                <p>Visitors to the park can witness the "Big Five" (lion, elephant, buffalo, leopard, and rhinoceros)
+                    along with other iconic African animals such as giraffes, zebras, cheetahs, and numerous species of
+                    antelope. The park is also a haven for birdwatchers, boasting over 400 bird species.</p>
+            </div>
+        </div>
+
+        <div class="container2">
+
+            <div class="section">
+                <h2>Scenic Landscapes</h2>
+                <p>The park features a diverse landscape, including open grass plains, acacia woodlands, and riverine
+                    forests. The backdrop of the city skyline against the wildlife creates a unique juxtaposition,
+                    making it a popular destination for photographers.</p>
+            </div>
+
+            <div class="section">
+                <h2>Activities</h2>
+                <div class="activity">
+                    <h3>Safari Drives</h3>
+                    <p>Guided safari drives offer visitors the chance to explore the park's vast landscapes and observe
+                        wildlife in their natural habitat.</p>
+                </div>
+                <div class="activity">
+                    <h3>Picnic Sites</h3>
+                    <p>Enjoy a relaxing day at designated picnic spots within the park, providing a unique setting to
+                        savor the beauty of nature.</p>
+                </div>
+            </div>
+            <div class="activity">
+                <h3>Animal Orphanage</h3>
+                <p>The Nairobi Animal Orphanage within the park is a rehabilitation center for orphaned or injured
+                    animals, providing educational opportunities for visitors.</p>
+            </div>
+        </div>
+        <div class="container3">
+            <div class="section">
+                <h2>Visitor Facilities</h2>
+                <div class="facility">
+                    <h3>Visitor Center</h3>
+                    <p>The park's visitor center offers information, maps, and educational resources about the wildlife
+                        and conservation efforts.</p>
+                </div>
+                <div class="facility">
+                    <h3>Souvenir Shops</h3>
+                    <p>Find unique mementos, crafts, and souvenirs at the shops within the park.</p>
+                </div>
+                <div class="facility">
+                    <h3>Restaurants</h3>
+                    <p>Enjoy local and international cuisine at the on-site restaurants.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Conservation Efforts</h2>
+                <p>Nairobi National Park plays a crucial role in wildlife conservation and environmental education. The
+                    park collaborates with various conservation organizations to protect endangered species and promote
+                    sustainable practices.</p>
+            </div>
+
+            <div class="section">
+                <h2>Accessibility</h2>
+                <p>The park is easily accessible by road from Nairobi city center, and transportation options, including
+                    guided tours, are available for visitors.</p>
+            </div>
+        </div>
+        <div class="container4">
+            <div class="section">
+                <h2 >Entrance Fees</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Residents (Ksh)</th>
+                            <th>Non-Residents (Ksh)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Adults (Above 18 years)</td>
+                            <td>500</td>
+                            <td>2000</td>
+                        </tr>
+                        <tr>
+                            <td>Children (Below 18 years)</td>
+                            <td>200</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td>Students (with valid ID)</td>
+                            <td>200</td>
+                            <td>1000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <footer>
+            <p style="color:black">&copy; 2024 Nairobi National Park. All rights reserved.</p>
+        </footer>
+
+</body>
+
+</html>

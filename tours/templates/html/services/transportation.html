@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transportation Options Near Nairobi National Park</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/transportation.css') }}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </div>
+        <ul class="nav-list" id="navList">
+            <li class="nav-item"><a href="{{ url_for('index') }}">Home</a></li>
+            <li class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">DISCOVER&#9660;</a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item"><a href="{{ url_for('animals') }}">Animals</a></li>
+                    <li class="nav-item"><a href="{{ url_for('hotels') }}">Hotels</a></li>
+                    <li class="nav-item"><a href="{{ url_for('citymalls') }}">Citymalls</a></li>
+                   
+
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">SERVICES &#9660;</a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item"><a href="{{ url_for('accommodation') }}">Accommodation</a></li>
+                    <li class="nav-item"><a href="{{ url_for('packages') }}">Packages</a></li>
+                    <li class="nav-item"><a href="{{ url_for('transportation') }}">Transportation</a></li>
+                    <li class="nav-item"><a href="{{ url_for('map') }}">Live map</a></li>
+
+                </ul>
+            </li>
+            <li class="nav-item"><a href="{{ url_for('about') }}">About</a></li>
+            <li class="nav-item"><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+
+        <div class="transoptions">
+            <h1>Transportation Options Near Nairobi National Park</h1>
+
+            <h2>Taxis:</h2>
+
+            Taxis are readily available in Nairobi and can be hired for a trip to Nairobi National Park.
+            Visitors can negotiate with taxi drivers for a round-trip fare or arrange for the taxi to wait at the
+            park until they are ready to return.
+            <ul>
+                <li>Little Cab: <a href="tel:+254722200000">+254 722 200 000</a>, <a href="tel:+254733600000">+254 733
+                        600 000</a> (known for being reliable and safe)</li>
+                <li>Safeline Cabs: <a href="tel:+254727121212">+254 727 121 212</a>, <a href="tel:+254733626626">+254
+                        733 626 626</a> (offers a variety of car options)</li>
+                <li>City Cab: <a href="tel:+254722500000">+254 722 500 000</a> (widely available and affordable)</li>
+            </ul>
+
+            <h2>Uber:</h2>
+            <p>Ride-hailing services like Uber and Bolt operate in Nairobi and can be used to reach Nairobi National
+                Park.
+                Visitors can simply request a ride through the app and specify the park's entrance as their destination.
+                Uber operates in Nairobi, offering various vehicle options and fare estimates upfront. Download the app
+                and enter your destination for availability and pricing.</p>
+
+            <h2>Buses:</h2>
+            <p>Several public buses stop near the park entrance, including:</p>
+            <ul>
+                <li>Route 125: From the City Centre to Karen, stopping near the park's main gate.</li>
+                <li>Route 111: From the City Centre to Rongai, passing near the park's southern entrance.</li>
+                <li>Matatus: Minibuses with set routes and fares, offering a more affordable but crowded option. Ask
+                    locals or look for designated matatu stages for specific routes.</li>
+            </ul>
+        </div>
+        <div class="addoptions">
+            <h2>Additional Options:</h2>
+            <ul>
+                <li>Biking: The park offers bike rentals for exploring its trails.</li>
+                <li>Park Shuttle: The park operates a shuttle service within the park boundaries for a fee.</li>
+            </ul>
+
+            <h2>Tips:</h2>
+            <ul>
+                <li>Consider booking taxis or Ubers in advance, especially during peak hours.</li>
+                <li>Agree on fares with taxi drivers beforehand to avoid misunderstandings.</li>
+                <li>Download offline maps or ask for directions if using public transportation.</li>
+                <li>Be aware of pickpockets, especially in crowded areas.</li>
+            </ul>
+
+            <p>I hope this information helps you choose the best transportation option for your visit to Nairobi
+                National
+                Park!</p>
+        </div>
+        <p>&copy;2024 Nairobi National Park. All rights reserved</p>
+</body>
+
+</html>

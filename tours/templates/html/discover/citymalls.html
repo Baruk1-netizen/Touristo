@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Nairobi National Park</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/citymalls.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </div>
+        <ul class="nav-list" id="navList">
+            <li class="nav-item"><a href="{{ url_for('index') }}">Home</a></li>
+            <li class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">DISCOVER&#9660;</a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item"><a href="{{ url_for('animals') }}">Animals</a></li>
+                    <li class="nav-item"><a href="{{ url_for('hotels') }}">Hotels</a></li>
+                    <li class="nav-item"><a href="{{ url_for('citymalls') }}">Citymalls</a></li>
+                    <li class="nav-item"><a href="{{ url_for('map') }}">Live map</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">SERVICES &#9660;</a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item"><a href="{{ url_for('accommodation') }}">Accommodation</a></li>
+                    <li class="nav-item"><a href="{{ url_for('packages') }}">Packages</a></li>
+                    <li class="nav-item"><a href="{{ url_for('transportation') }}">Transportation</a></li>
+                    
+                    
+
+                </ul>
+            </li>
+            <li class="nav-item"><a href="{{ url_for('about') }}">About</a></li>
+            <li class="nav-item"><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <h1>City Malls Near Nairobi National Park</h1>
+<div class="welcome">
+    <h2>
+
+        Embark on a shopping journey near Nairobi National Park, where the city malls redefine elegance and convenience.
+        Garden City Mall, Galleria Mall, NextGen Mall, South Field Mall, Dynamic Mall, and Gateway Mall stand as the
+        epitome of sophistication, offering a curated selection of local and international brands. Each mall boasts a
+        unique charm, from Garden City's family-friendly atmosphere to the modern tech allure of NextGen. Galleria
+        presents a blend of shopping and entertainment, while South Field Mall caters to diverse preferences. Dynamic
+        Mall and Gateway Mall, with their impressive architecture, complete the ensemble. These city malls near Nairobi
+        National Park collectively symbolize not just retail destinations but stylish hubs where tourists can seamlessly
+        blend leisure and shopping in a classic and refined setting.
+    </h2>
+</div>
+<div class="theanimals">
+    <div class="containers">
+    <div class="container1">
+        <img src="/static/images/GardenCityMall.jpeg" alt="Garden City mall">
+        <h1>Garden City Mall:</h1>
+        <p>
+            Location: Strategically situated for a convenient shopping experience, Garden City Mall offers a blend of
+            local and international brands.
+            Highlights: Visitors can explore a range of fashion outlets, electronics stores, and enjoy a variety of
+            dining options. The mall also features entertainment facilities for families.</p>
+    </div>
+
+    <hr style="border-top: 2px solid white;  width: 100%;" />
+
+    <div class="container2">
+        <img src="/static/images/Galleria Mall.jpeg" alt="Galleria Mall">
+        <h1>Galleria Mall:</h1>
+        <p>
+            Location: Located near Nairobi National Park, Galleria Mall is a popular shopping destination offering a mix
+            of retail outlets, cinemas, and recreational activities.
+            Attractions: Tourists can indulge in shopping from well-known brands, catch the latest movies, and enjoy a
+            vibrant atmosphere with cafes and restaurants.
+        </p>
+    </div>
+
+    <hr style="border-top: 2px solid white;  width: 100%;" />
+
+    <div class="container3">
+        <img src="/static/images/NextGenMall.jpeg" alt="NextGen Mall">
+        <h1>NextGen Mall:</h1>
+        <p>
+            Location: Adjacent to Nairobi National Park, NextGen Mall is a contemporary shopping complex known for its
+            diverse retail outlets and modern architecture.
+            Unique Features: This mall stands out for its tech stores, gaming centers, and a selection of trendy
+            boutiques, providing a modern shopping experience.</p>
+    </div>
+
+    <hr style="border-top: 2px solid white;  width: 100%;" />
+
+    <div class="container4">
+        <img src="/static/images/SouthFieldMall.jpeg" alt="South Field Mall">
+        <h1>South Field Mall:</h1>
+        <p>
+            Location: South Field Mall offers a convenient stop for tourists, featuring an array of shops, eateries, and
+            services in close proximity to Nairobi National Park.
+            Shopping Experience: From fashion and accessories to electronics and lifestyle stores, South Field Mall
+            caters to various preferences.</p>
+    </div>
+
+    <hr style="border-top: 2px solid white;  width: 100%;" />
+
+    <div class="container5">
+        <img src="/static/images/DynamicMall.jpeg" alt="Dynamic Mall">
+        <h1>Dynamic Mall:</h1>
+        <p>
+            Location: Positioned for accessibility, Dynamic Mall provides tourists with a dynamic shopping environment,
+            featuring both local and international brands.
+            Diverse Choices: With a mix of retail stores, cafes, and entertainment options, Dynamic Mall is a one-stop
+            destination for shopping and leisure.</p>
+
+    </div>
+
+    <hr style="border-top: 2px solid white;  width: 100%;" />
+
+    <div class="container6">
+        <img src="/static/images/GatewayMall.jpeg" alt="Gateway Mall">
+        <h1>Gateway Mall:</h1>
+        <p>
+            Location: Situated near Nairobi National Park, Gateway Mall stands out with its impressive architecture and
+            a diverse range of retail outlets.
+            Shopping Variety: Tourists can explore fashion stores, home decor shops, and enjoy a meal at the food court,
+            making it an ideal destination for a shopping excursion.</p>
+    </div>
+</div>
+</div>
+<footer>&copy;Nairobi National Park.All rights reserved</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Touristo</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/styles.css') }}">
+ </head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </div>
+        <ul class="nav-list" id="navList">
+            <li class="nav-item"><a href="{{ url_for('index') }}">Home</a></li>
+            <li class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">DISCOVER&#9660;</a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item"><a href="{{ url_for('animals') }}">Animals</a></li>
+                    <li class="nav-item"><a href="{{ url_for('hotels') }}">Hotels</a></li>
+                    <li class="nav-item"><a href="{{ url_for('citymalls') }}">Citymalls</a></li>
+                    <li class="nav-item"><a href="{{ url_for('map') }}">Live map</a></li>
+                   
+
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle">SERVICES &#9660;</a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item"><a href="{{ url_for('accommodation') }}">Accommodation</a></li>
+                    <li class="nav-item"><a href="{{ url_for('packages') }}">Packages</a></li>
+                    <li class="nav-item"><a href="{{ url_for('transportation') }}">Transportation</a></li>
+                    
+                    
+
+                </ul>
+            </li>
+            <li class="nav-item"><a href="{{ url_for('about') }}">About</a></li>
+            <li class="nav-item"><a href="{{ url_for('contact') }}">Contact</a></li>
+            
+        </ul>
+    </nav>
+    <div class="container1">
+
+        <p>"Your personalized travel companion – our tourist information system, where seamless planning meets
+            extraordinary destinations."</p>
+            
+
+    </div>
+
+
+    <div class="container2">
+        <div class="quest">
+            <h1>NATURE QUEST</h1>
+            <hr style="border-top: 2px solid white;  width: 100%;" />
+            <p>"Journey with confidence, guided by our comprehensive tourist information system – because your adventure
+                deserves
+                the perfect itinerary."</p>
+                
+                <hr style="border-top: 2px solid white;  width: 100%; " />
+                <p>See beauty of nature!<p>
+        </div>
+        <div class="animals">
+            <div class="group1">
+                <div class="lion">
+                    <img src="/static/images/WildLife1.jpeg" alt="lion">
+                </div>
+                <div class="leo">
+                    <img src="/static/images/Wildlife2.jpg" alt="leo">
+                </div>
+                <div class="giraffe">
+                    <img src="/static/images/Wildlife3.jpg" alt="giraffe">
+                </div>
+            </div>
+            <hr style="border-top: 2px solid white;  width: 100%; margin-top:-22px"  />
+            <div class="group2">
+                <div class="zebra">
+                    <img src="/static/images/Wildlife4.jpg" alt="zebra">
+                </div>
+                <div class="elephant">
+                    <img src="/static/images/Wildlife5.jpg" alt="elephant">
+                </div>
+                <div class="rhino">
+                    <img src="/static/images/Wildlife6.jpg" alt="rhino">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container3">
+        <div class="tourist">
+            <img src="/static/images/pexels-erik-mclean-5571977.jpg" alt="tourist">
+        </div>
+
+        <div class="capture">
+            <div class="moments">
+
+        <h1>Capturing moments in nature's embrace</h1>
+        <p>A photographic journey through the serene beauty of the park</p>
+            </div>
+        <div class="options">
+            <div class="photo">
+        <h2>PHOTOGRAPHY</h2>
+            </div>
+            <div class="video">
+        <h2>VIDEOGRAPGHY</h2>
+            </div>
+            <div class="shoot">
+        <h2>SHOOTS</h2>
+            </div>
+        </div>
+        </div>
+    </div>
+<div class="container4">
+<div class="media">
+    <a href="https://www.instagram.com/baruk_ke/"><img src="/static/images/skill-icons--instagram.svg" alt="insta"> </a>
+    <a href="https://www.linkedin.com/in/baruk-ali-634085281/"><img src="/static/images/skill-icons--linkedin.svg" alt="linkedIn"></a>
+    <a href="https://twitter.com/Baruk_KE"><img src="/static/images/devicon--twitter.svg" alt="twitter"></a>
+    
+    
+</div>
+</div>
+</div>
+</body>
+
+</html>

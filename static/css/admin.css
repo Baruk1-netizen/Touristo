@@ -1,0 +1,308 @@
+.navbar {
+    color: rgb(81, 193, 154);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: hsla(122, 41%, 78%, 1);
+    box-shadow: 0 0 30px rgb(0, 255, 26);
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-right: 20px;
+    position: relative;
+}
+
+.nav-item a {
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: hsla(122, 41%, 78%, 1);
+    padding: 10px;
+    list-style: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: #000;
+    width: 100px;
+}
+
+.dropdown-menu li {
+    margin-bottom: 5px;
+}
+
+.nav-item:hover .dropdown-menu,
+.nav-item:focus-within .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li:hover {
+    background-color: hsla(0, 0%, 20%, 1);
+    color: #000;
+    /* Set text color to black */
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.nav dropdown-icon img {
+    width: 200px;
+    height: 20px;
+}
+
+.navbar .dropdown-icon img {
+    display: none;
+    cursor: pointer;
+    background-color: seagreen;
+    width: 40px;
+}
+/* styles.css */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 8px;
+    border: 1px solid #dddddd;
+}
+
+table th {
+    background-color: #35f142;
+    font-weight: bold;
+}
+
+table td {
+    text-align: left;
+}
+h2{
+    color: rgb(35, 227, 45);
+}
+
+.TouristInfo{
+    background-color: silver;
+    box-shadow: 0 0 30px rgb(0, 255, 26);
+    margin-bottom: 20px;
+}
+.search{
+    
+        display: inline-block;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #24f042;
+        border-radius: 5px;
+        background-color: #24f042;
+      }
+    
+      /* Style for the input field */
+      .search input[type="text"] {
+        width: 200px;
+        padding: 5px;
+        margin-right: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+    
+      /* Style for the search button */
+      .search button {
+        padding: 6px 10px;
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+    
+      /* Hover effect for the search button */
+      .search button:hover {
+        background-color: #0056b3;
+      }
+body{
+    background-image: linear-gradient(to right, aqua, rgb(89, 233, 46), silver);
+}
+/*mobile view*/
+.navbar {
+    color: rgb(81, 193, 154);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: hsla(122, 41%, 78%, 1);
+    box-shadow: 0 0 30px black;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-right: 20px;
+    position: relative;
+}
+
+.nav-item a {
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: hsla(122, 41%, 78%, 1);
+    padding: 10px;
+    list-style: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: #000;
+    width: 100px;
+}
+
+.dropdown-menu li {
+    margin-bottom: 5px;
+}
+
+.nav-item:hover .dropdown-menu,
+.nav-item:focus-within .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li:hover {
+    background-color: hsla(0, 0%, 20%, 1);
+    color: #000;
+    /* Set text color to black */
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.nav dropdown-icon img {
+    width: 200px;
+    height: 20px;
+}
+
+.navbar .dropdown-icon img {
+    display: none;
+    cursor: pointer;
+    background-color: seagreen;
+    width: 40px;
+}
+.transoptions{
+    background-color: silver;
+    border-top-right-radius: 500px;
+    border-bottom-left-radius: 500px;
+    box-shadow: 0 0 30px black;
+    margin-top: 50px;
+}
+.addoptions{
+    background-color: aqua;
+    height: 400px;
+    box-shadow: 0 0 30px black;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+/*mobile design*/
+@media only screen and (max-width: 768px) {
+  .navbar {
+    color: rgb(81, 193, 154);
+    padding: 10px 20px;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-around;
+    /* align-items: center; */
+    background-color: hsla(122, 41%, 78%, 1);
+    box-shadow: 0 0 30px black;
+    width: 90%;
+    font-size: 8px;
+    height: 20px;
+   
+    
+    
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-right: 20px;
+    position: relative;
+}
+
+.nav-item a {
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: hsla(122, 41%, 78%, 1);
+    padding: 10px;
+    list-style: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: #000;
+    width: 100px;
+}
+
+.dropdown-menu li {
+    margin-bottom: 5px;
+}
+
+.nav-item:hover .dropdown-menu,
+.nav-item:focus-within .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li:hover {
+    background-color: hsla(0, 0%, 20%, 1);
+    color: #000;
+    /* Set text color to black */
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.nav dropdown-icon img {
+    width: 200px;
+    height: 20px;
+}
+
+.navbar .dropdown-icon img {
+    display: none;
+    cursor: pointer;
+    background-color: seagreen;
+    width: 40px;
+}
+body{
+    font-size: 8px;
+}
+}

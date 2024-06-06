@@ -1,0 +1,912 @@
+/*navbar-start*/
+
+.navbar {
+    color: rgb(81, 193, 154);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: hsla(122, 41%, 78%, 1);
+    box-shadow: 0 0 30px black;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-right: 20px;
+    position: relative;
+}
+
+.nav-item a {
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: hsla(122, 41%, 78%, 1);
+    padding: 10px;
+    list-style: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: #000;
+    width: 100px;
+}
+
+.dropdown-menu li {
+    margin-bottom: 5px;
+}
+
+.nav-item:hover .dropdown-menu,
+.nav-item:focus-within .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li:hover {
+    background-color: hsla(0, 0%, 20%, 1);
+    color: #000;
+    /* Set text color to black */
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.nav dropdown-icon img {
+    width: 200px;
+    height: 20px;
+}
+
+.navbar .dropdown-icon img {
+    display: none;
+    cursor: pointer;
+    background-color: seagreen;
+    width: 40px;
+}
+
+/*navbar-end*/
+h2{
+    color: blue;
+}
+/*Panari start*/
+.panari {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    background-color: aqua;
+    height: 500px;
+    box-shadow: 0 0 30px black;
+}
+
+.panariinfo {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.panari img {
+    width: 400px;
+    height: 290px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    gap: 20px;
+    margin-top: 65px;
+    box-shadow: 0 0 30px aqua;
+
+}
+/*panari end*/
+/*eka start*/
+.eka {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    background-color: aqua;
+    height: 500px;
+    box-shadow: 0 0 30px black;
+
+}
+
+.ekainfo {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.eka img {
+    width: 400px;
+    height: 290px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    gap: 20px;
+    margin-top: 65px;
+    box-shadow: 0 0 30px aqua;
+
+}
+/*eka end*/
+/*decasa start*/
+.decasa {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    background-color: aqua;
+    height: 500px;
+    box-shadow: 0 0 30px black;
+
+}
+
+.decasainfo {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.decasa img {
+    width: 400px;
+    height: 290px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    gap: 20px;
+    margin-top: 65px;
+    box-shadow: 0 0 30px aqua;
+
+}
+/*decasa end*/
+/*boma start*/
+.boma {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    background-color: aqua;
+    height: 500px;
+    box-shadow: 0 0 30px black;
+}
+
+.bomainfo {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.boma img {
+    width: 400px;
+    height: 290px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    gap: 20px;
+    margin-top: 65px;
+    box-shadow: 0 0 30px aqua;
+}
+/*boma end*/
+/*olesereni start*/
+.olesereni {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    background-color: aqua;
+    height: 500px;
+    box-shadow: 0 0 30px black;
+
+}
+
+.olesereniinfo {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.olesereni img {
+    width: 400px;
+    height: 290px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    gap: 20px;
+    margin-top: 65px;
+    box-shadow: 0 0 30px aqua;
+
+}
+/*olesereni end*/
+/*radisson start*/
+.radisson {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    background-color: aqua;
+    height: 500px;
+    box-shadow: 0 0 30px black;
+}
+
+.radissoninfo {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.radisson img {
+    width: 400px;
+    height: 290px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    gap: 20px;
+    margin-top: 65px;
+    box-shadow: 0 0 30px aqua;
+}
+/*radisson end*/
+.bookingpanari {
+    display: flex;
+    flex-direction: column;
+    background-color: silver;
+    margin-left: 50px;
+   border-bottom-right-radius: 300px;
+}   
+.bookingeka {
+    display: flex;
+    flex-direction: column;
+    background-color: silver;
+    margin-left: 50px;
+   border-bottom-right-radius: 200px;
+}   
+.bookingdecasa {
+    display: flex;
+    flex-direction: column;
+    background-color: silver;
+    margin-left: 50px;
+   border-bottom-right-radius: 200px;
+}   
+.bookingboma {
+    display: flex;
+    flex-direction: column;
+    background-color: silver;
+    margin-left: 50px;
+   border-bottom-right-radius: 200px;
+}   
+.bookingsereni {
+    display: flex;
+    flex-direction: column;
+    background-color: silver;
+    margin-left: 50px;
+   border-bottom-right-radius: 200px;
+}   
+.bookingradisson {
+    display: flex;
+    flex-direction: column;
+    background-color: silver;
+    margin-left: 50px;
+   border-bottom-right-radius: 200px;
+}   
+
+.hotelsimg img:hover{
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgb(0, 0, 0,0.7);
+  cursor: pointer;
+  box-shadow: 0 8px 12px rgb(0, 0, 0,0.7);
+}
+.hotelsimg img:active{
+  transform: scale(0.95);
+}
+/*Panari bookingsection start*/
+.bookpanari form{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    margin-left: 0px;
+   gap: 20px;
+    border-bottom-right-radius: 200px;
+    margin-top: -5px;
+    /*box-shadow: 0 0 30px blue;*/
+   
+}
+.bookpanaribtn button{
+    background-color: chartreuse;
+    height: 40px;
+    width: 200px;
+    
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.bookpanaribtn button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 30px blue;
+    cursor: pointer;
+    box-shadow: 0 0 30px blue;
+}
+.panariimg{
+    background-color: silver;
+    border-top-right-radius: 500px;
+    border-bottom-right-radius: 500px;
+    margin-left: 20px;
+}
+/*Panari bookingsection end*/
+/*eka bookingsection start*/
+.bookeka form{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    margin-left: 0px;
+   gap: 20px;
+    border-bottom-right-radius: 200px;
+    margin-top: -5px;
+    /*box-shadow: 0 0 30px blue;*/
+   
+}
+.bookekabtn button{
+    background-color: chartreuse;
+    height: 40px;
+    width: 200px;
+    
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.bookekabtn button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 30px blue;
+    cursor: pointer;
+    box-shadow: 0 0 30px blue;
+}
+.ekaimg{
+    background-color: silver;
+    border-top-right-radius: 500px;
+    border-bottom-right-radius: 500px;
+}
+/*Panari bookingsection end*/
+/*Panari bookingsection start*/
+.bookdecasa form{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    margin-left: 0px;
+   gap: 20px;
+    border-bottom-right-radius: 200px;
+    margin-top: -5px;
+    /*box-shadow: 0 0 30px blue;*/
+   
+}
+.bookdecasabtn button{
+    background-color: chartreuse;
+    height: 40px;
+    width: 200px;
+    
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.bookdecasabtn button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 30px blue;
+    cursor: pointer;
+    box-shadow: 0 0 30px blue;
+}
+.decasaimg{
+    background-color: silver;
+    border-top-right-radius: 500px;
+    border-bottom-right-radius: 500px;
+    margin-left: 35px;
+}
+/*Panari bookingsection end*/
+/*Panari bookingsection start*/
+.bookboma form{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    margin-left: 0px;
+   gap: 20px;
+    border-bottom-right-radius: 200px;
+    margin-top: -5px;
+    /*box-shadow: 0 0 30px blue;*/
+   
+}
+.bookbomabtn button{
+    background-color: chartreuse;
+    height: 40px;
+    width: 200px;
+    
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.bookbomabtn button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 30px blue;
+    cursor: pointer;
+    box-shadow: 0 0 30px blue;
+}
+.bomaimg{
+    background-color: silver;
+    border-top-right-radius: 500px;
+    border-bottom-right-radius: 500px;
+    margin-left: -14px;
+}
+/*Panari bookingsection end*/
+/*Panari bookingsection start*/
+.booksereni form{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    margin-left: 0px;
+   gap: 20px;
+    border-bottom-right-radius: 200px;
+    margin-top: -5px;
+    /*box-shadow: 0 0 30px blue;*/
+   
+}
+.bookserenibtn button{
+    background-color: chartreuse;
+    height: 40px;
+    width: 200px;
+    
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.bookserenibtn button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 30px blue;
+    cursor: pointer;
+    box-shadow: 0 0 30px blue;
+}
+.sereniimg{
+    background-color: silver;
+    border-top-right-radius: 500px;
+    border-bottom-right-radius: 500px;
+    margin-left: 55px;
+
+}
+/*Panari bookingsection end*/
+/*Panari bookingsection start*/
+.bookradisson form{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    margin-left: 0px;
+   gap: 20px;
+    border-bottom-right-radius: 200px;
+    margin-top: -5px;
+    /*box-shadow: 0 0 30px blue;*/
+   
+}
+.bookradissonbtn button{
+    background-color: chartreuse;
+    height: 40px;
+    width: 200px;
+    
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.bookradissonbtn button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 30px blue;
+    cursor: pointer;
+    box-shadow: 0 0 30px blue;
+}
+.radissonimg{
+    background-color: silver;
+    border-top-right-radius: 500px;
+    border-bottom-right-radius: 500px;
+    margin-left: 40px;
+}
+/*Panari bookingsection end*/
+
+/*mobile design*/
+@media (max-width: 768px) {
+    /*navbar-start*/
+body{
+    font-size: 10px;
+
+}
+/* body img{
+    width: 100px;
+    height: 90px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    gap: 20px;
+    margin-top: 65px;
+    box-shadow: 0 0 30px aqua;
+} */
+.navbar {
+    color: rgb(81, 193, 154);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: hsla(122, 41%, 78%, 1);
+    box-shadow: 0 0 30px black;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-right: 20px;
+    position: relative;
+}
+
+.nav-item a {
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: hsla(122, 41%, 78%, 1);
+    padding: 10px;
+    list-style: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: #000;
+    width: 100px;
+}
+
+.dropdown-menu li {
+    margin-bottom: 5px;
+}
+
+.nav-item:hover .dropdown-menu,
+.nav-item:focus-within .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li:hover {
+    background-color: hsla(0, 0%, 20%, 1);
+    color: #000;
+    /* Set text color to black */
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.nav dropdown-icon img {
+    width: 200px;
+    height: 20px;
+}
+
+.navbar .dropdown-icon img {
+    display: none;
+    cursor: pointer;
+    background-color: seagreen;
+    width: 40px;
+}
+/*navbar-end*/
+.panariimg{
+    background-color: silver;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    margin-left: 0px;
+    width: 80%;
+    height: 300px;
+}
+
+.panari {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: aqua;
+    height: 100%;
+    box-shadow: 0 0 30px black;
+    width: 375px;
+}
+.panari img {
+    width: 250px;
+    height: 190px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-left:  100px;
+    gap: 20px;
+    /* margin-top: 25px; */
+    box-shadow: 0 0 30px aqua;
+    margin-bottom: 50px;
+
+}
+.bookpanari form{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    margin-left: 0px;
+   gap: 20px;
+    border-bottom-right-radius: 100px;
+    margin-top: -5px;
+    /*box-shadow: 0 0 30px blue;*/
+   
+}
+.bookingpanari {
+    display: flex;
+    flex-direction: column;
+    background-color: silver;
+    margin-left: 50px;
+   border-bottom-right-radius: 150px;
+}  
+.panariimg{
+    background-color: silver;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    margin-left: 0px;
+    width: 80%;
+    height: 300px;
+}
+
+.eka {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: aqua;
+    height: 100%;
+    box-shadow: 0 0 30px black;
+    width: 375px;
+}
+.eka img {
+    width: 250px;
+    height: 190px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-left:  100px;
+    gap: 20px;
+    /* margin-top: 25px; */
+    box-shadow: 0 0 30px aqua;
+    margin-bottom: 50px;
+
+}
+.bookeka form{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    margin-left: 0px;
+   gap: 20px;
+    border-bottom-right-radius: 100px;
+    margin-top: -5px;
+    /*box-shadow: 0 0 30px blue;*/
+   
+}
+.bookingeka {
+    display: flex;
+    flex-direction: column;
+    background-color: silver;
+    margin-left: 50px;
+   border-bottom-right-radius: 150px;
+}  
+.decasaimg{
+    background-color: silver;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    margin-left: 0px;
+    width: 80%;
+    height: 300px;
+}
+
+.decasa {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: aqua;
+    height: 100%;
+    box-shadow: 0 0 30px black;
+    width: 375px;
+}
+.decasa img {
+    width: 250px;
+    height: 190px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-left:  100px;
+    gap: 20px;
+    /* margin-top: 25px; */
+    box-shadow: 0 0 30px aqua;
+    margin-bottom: 50px;
+
+}
+.bookdecasa form{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    margin-left: 0px;
+   gap: 20px;
+    border-bottom-right-radius: 100px;
+    margin-top: -5px;
+    /*box-shadow: 0 0 30px blue;*/
+   
+}
+.bookingdecasa {
+    display: flex;
+    flex-direction: column;
+    background-color: silver;
+    margin-left: 50px;
+   border-bottom-right-radius: 150px;
+}  
+.bomaimg{
+    background-color: silver;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    margin-left: 0px;
+    width: 80%;
+    height: 300px;
+}
+
+.boma {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: aqua;
+    height: 100%;
+    box-shadow: 0 0 30px black;
+    width: 375px;
+}
+.boma img {
+    width: 250px;
+    height: 190px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-left:  100px;
+    gap: 20px;
+    /* margin-top: 25px; */
+    box-shadow: 0 0 30px aqua;
+    margin-bottom: 50px;
+
+}
+.bookboma form{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    margin-left: 0px;
+   gap: 20px;
+    border-bottom-right-radius: 100px;
+    margin-top: -5px;
+    /*box-shadow: 0 0 30px blue;*/
+   
+}
+.bookingboma {
+    display: flex;
+    flex-direction: column;
+    background-color: silver;
+    margin-left: 50px;
+   border-bottom-right-radius: 150px;
+}  
+
+.sereniimg{
+    background-color: silver;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    margin-left: 0px;
+    width: 80%;
+    height: 300px;
+}
+
+.olesereni {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: aqua;
+    height: 100%;
+    box-shadow: 0 0 30px black;
+    width: 375px;
+}
+.olesereni img {
+    width: 250px;
+    height: 190px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-left:  100px;
+    gap: 20px;
+    /* margin-top: 25px; */
+    box-shadow: 0 0 30px aqua;
+    margin-bottom: 50px;
+
+}
+.booksereni form{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    margin-left: 0px;
+   gap: 20px;
+    border-bottom-right-radius: 100px;
+    margin-top: -5px;
+    /*box-shadow: 0 0 30px blue;*/
+   
+}
+.bookingsereni {
+    display: flex;
+    flex-direction: column;
+    background-color: silver;
+    margin-left: 50px;
+   border-bottom-right-radius: 150px;
+}  
+
+.radissonimg{
+    background-color: silver;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    margin-left: 0px;
+    width: 80%;
+    height: 300px;
+}
+
+.radisson {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: aqua;
+    height: 100%;
+    box-shadow: 0 0 30px black;
+    width: 375px;
+}
+.radisson img {
+    width: 250px;
+    height: 190px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-left:  100px;
+    gap: 20px;
+    /* margin-top: 25px; */
+    box-shadow: 0 0 30px aqua;
+    margin-bottom: 50px;
+
+}
+.bookradisson form{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    margin-left: 0px;
+   gap: 20px;
+    border-bottom-right-radius: 100px;
+    margin-top: -5px;
+    /*box-shadow: 0 0 30px blue;*/
+   
+}
+.bookingradisson {
+    display: flex;
+    flex-direction: column;
+    background-color: silver;
+    margin-left: 50px;
+   border-bottom-right-radius: 150px;
+}  
+}

@@ -1,20 +1,23 @@
 from functools import wraps
 from flask import render_template, redirect, request, session
-from tours.models import User, Accommodation, Package, Contact, Admin
-from tours import app, db
+from db.models import User, Accommodation, Package, Contact, Admin
+from db.db import db
 from datetime import datetime
-
+from config import app
 
 def login_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
         if 'logged_in' not in session:
-            return redirect('/')
+            return redirect('/login')
         return f(*args, **kwargs)
     return decorated_function
 
+@app.route('/')
+def landingpage():
+    return render_template('landingpage.html')
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         email = request.form.get('email')
@@ -75,31 +78,31 @@ def index():
 
 
 @app.route('/animals')
-@login_required
+# @login_required
 def animals():
     return render_template('/html/discover/animals.html')
 
 
 @app.route('/citymalls')
-@login_required
+# @login_required
 def citymalls():
     return render_template('/html/discover/citymalls.html')
 
 
 @app.route('/hotels')
-@login_required
+# @login_required
 def hotels():
     return render_template('/html/discover/hotels.html')
 
 
 @app.route('/interactive map')
-@login_required
+# @login_required
 def map():
     return render_template('/html/discover/map.html')
 
 
 @app.route('/accommodation', methods=['GET', 'POST'])
-@login_required
+# @login_required
 def accommodation():
     if request.method == 'POST':
             name = request.form.get('name')
@@ -122,7 +125,7 @@ def accommodation():
 
 
 @app.route('/packages', methods=['GET', 'POST'])
-@login_required
+# @login_required
 def packages():
     if request.method == 'POST':
         name = request.form.get('name')
@@ -144,19 +147,19 @@ def packages():
 
 
 @app.route('/transportation')
-@login_required
+# @login_required
 def transportation():
     return render_template('/html/services/transportation.html')
 
 
 @app.route('/about')
-@login_required
+# @login_required
 def about():
     return render_template('about.html')
 
 
 @app.route('/contact', methods=['GET', 'POST'])
-@login_required
+# @login_required
 def contact():
     if request.method == 'POST':
         name = request.form.get('name')
@@ -259,7 +262,3 @@ def search():
         print(search)
         return render_template('admin.html', search=search)
     # return render_template('admin.html')
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
